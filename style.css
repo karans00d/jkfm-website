@@ -294,6 +294,77 @@ h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; line-height: 1.15; }
 .testimonial-author { font-size: 0.85rem; font-weight: 600; color: var(--text); }
 .testimonial-role { font-size: 0.8rem; color: var(--text-light); }
 
+/* ── HUB / OUR ROLE ── */
+.hub-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.hub-badge {
+  display: inline-block; font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--primary); background: rgba(26,60,46,0.08);
+  padding: 6px 16px; border-radius: 99px; margin-bottom: 20px;
+}
+.hub-text h2 { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 900; margin-bottom: 20px; text-align: left; line-height: 1.1; }
+.hub-text p { font-size: 1rem; color: var(--text-light); line-height: 1.8; margin-bottom: 24px; }
+.hub-quote {
+  border-left: 4px solid var(--accent); padding: 12px 20px; margin: 0 0 28px;
+  font-size: 1.05rem; font-style: italic; font-weight: 600;
+  color: var(--primary); background: none;
+}
+.hub-checklist { list-style: none; }
+.hub-checklist li {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 0.95rem; font-weight: 600; color: var(--text); padding: 10px 0;
+}
+.hub-check {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 24px; height: 24px; border-radius: 50%; flex-shrink: 0;
+  background: var(--accent); color: var(--white); font-size: 0.75rem; font-weight: 700;
+}
+
+/* Hub diagram */
+.hub-diagram { display: flex; flex-direction: column; align-items: center; }
+.hub-node { text-align: center; }
+.hub-node-icon { font-size: 1.6rem; margin-bottom: 4px; }
+.hub-node-label { font-family: 'Montserrat', sans-serif; font-size: 0.8rem; font-weight: 700; }
+.hub-node-sub { font-size: 0.7rem; color: var(--text-light); }
+.hub-node--center {
+  width: 120px; height: 120px; border-radius: 50%;
+  background: var(--surface-dark); color: var(--white);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  border: 3px solid var(--accent);
+}
+.hub-node--center .hub-node-label { color: var(--white); font-size: 0.9rem; }
+.hub-node--center .hub-node-sub { color: var(--text-on-dark); }
+.hub-node--top, .hub-node--bottom {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px 24px;
+}
+.hub-connector-vertical {
+  width: 2px; height: 32px; background: var(--accent); margin: 4px 0;
+}
+.hub-connector-branch {
+  width: 2px; height: 24px; background: var(--accent); margin: 4px 0;
+  position: relative;
+}
+.hub-connector-branch::after {
+  content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 140px; height: 2px; background: var(--accent);
+}
+.hub-branch {
+  display: flex; gap: 48px; margin-top: 24px;
+}
+
+/* ── ONBOARDING ROADMAP ── */
+.roadmap-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; }
+.roadmap-step { text-align: center; position: relative; padding: 0 16px; }
+.roadmap-icon { font-size: 2.2rem; margin-bottom: 16px; position: relative; z-index: 1; }
+.roadmap-connector {
+  position: absolute; top: 22px; left: calc(50% + 20px); width: calc(100% - 40px);
+  height: 2px; background: var(--accent); z-index: 0;
+}
+.roadmap-step:last-child .roadmap-connector { display: none; }
+.roadmap-step h3 { font-size: 0.9rem; font-weight: 700; margin-bottom: 8px; }
+.roadmap-step p { font-size: 0.82rem; color: var(--text-light); line-height: 1.6; }
+
 /* ── FAQ ── */
 .faq-list { max-width: 720px; margin: 0 auto; }
 .faq-item { border-bottom: 1px solid var(--border); }
@@ -363,8 +434,9 @@ textarea.form-input { resize: vertical; min-height: 100px; }
 /* ── FOOTER ── */
 .footer { background: var(--surface-dark); padding: 64px 0 32px; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; }
-.footer-logo { width: 40px; height: 40px; object-fit: contain; margin-bottom: 12px; }
-.footer-brand h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--white); margin-bottom: 12px; }
+.footer-brand-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.footer-logo { width: 36px; height: 36px; object-fit: contain; }
+.footer-brand h3 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.85rem; color: var(--white); line-height: 1.25; }
 .footer-brand p { font-size: 0.85rem; color: rgba(255,255,255,0.45); line-height: 1.7; max-width: 280px; }
 .footer-col h4 {
   font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.75rem;
@@ -511,6 +583,10 @@ textarea.form-input { resize: vertical; min-height: 100px; }
   .process-step::after { display: none; }
   .problem-grid { grid-template-columns: 1fr; gap: 40px; }
   .challenge-grid { grid-template-columns: 1fr; gap: 24px; }
+  .hub-layout { grid-template-columns: 1fr; gap: 40px; }
+  .hub-diagram { margin-top: 20px; }
+  .roadmap-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .roadmap-connector { display: none; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .trust-bar-inner { flex-wrap: wrap; gap: 32px; }
   .form-row { grid-template-columns: 1fr; }
