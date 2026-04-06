@@ -1,144 +1,117 @@
-// ================================================================
-// JKFM WEBSITE — JAVASCRIPT
-// ================================================================
+/* ================================================================
+   JKFM Website — JavaScript
+   Mobile nav, FAQ accordion, contact form, smooth scroll
+================================================================ */
 
-// ── 1. ANIMATE STAT NUMBERS ON SCROLL ──
-function animateCounters() {
-  const counters = document.querySelectorAll('.stat-number');
-  counters.forEach(counter => {
-    const target = parseInt(counter.dataset.target, 10);
-    const duration = 1800;
-    const step = target / (duration / 16);
-    let current = 0;
+document.addEventListener('DOMContentLoaded', function () {
 
-    const timer = setInterval(() => {
-      current += step;
-      if (current >= target) {
-        counter.textContent = target;
-        clearInterval(timer);
-      } else {
-        counter.textContent = Math.floor(current);
-      }
-    }, 16);
-  });
-}
+  // ── Mobile Nav Toggle ──────────────────────────────────────────
+  const navToggle = document.getElementById('navToggle');
+  const navMobile = document.getElementById('navMobile');
 
-// ── 2. INTERSECTION OBSERVER — animate service cards + trigger counters ──
-const observerOptions = { threshold: 0.15 };
+  if (navToggle && navMobile) {
+    navToggle.addEventListener('click', function () {
+      const isOpen = navMobile.classList.toggle('open');
+      navToggle.classList.toggle('open', isOpen);
+      navToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
 
-const cardObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      // Stagger each card slightly
-      setTimeout(() => {
-        entry.target.classList.add('visible');
-      }, i * 80);
-      cardObserver.unobserve(entry.target);
-    }
-  });
-}, observerOptions);
-
-document.querySelectorAll('[data-animate]').forEach(el => {
-  cardObserver.observe(el);
-});
-
-// Trigger counter animation when hero stats come into view
-const heroStats = document.querySelector('.hero-stats');
-let countersTriggered = false;
-if (heroStats) {
-  const statsObserver = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting && !countersTriggered) {
-      countersTriggered = true;
-      animateCounters();
-      statsObserver.disconnect();
-    }
-  }, { threshold: 0.5 });
-  statsObserver.observe(heroStats);
-}
-
-// ── 3. MOBILE NAV TOGGLE ──
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks  = document.querySelector('.nav-links');
-
-if (navToggle && navLinks) {
-  navToggle.addEventListener('click', () => {
-    const isOpen = navLinks.style.display === 'flex';
-    navLinks.style.cssText = isOpen
-      ? ''
-      : 'display:flex;flex-direction:column;position:absolute;top:68px;left:0;right:0;background:rgba(13,31,22,0.98);padding:1.5rem 2rem;gap:1.2rem;border-bottom:1px solid rgba(201,168,76,0.2)';
-  });
-}
-
-// Close mobile nav when a link is clicked
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    if (window.innerWidth <= 900) navLinks.style.cssText = '';
-  });
-});
-
-// ── 4. STICKY NAV — add shadow on scroll ──
-window.addEventListener('scroll', () => {
-  const nav = document.querySelector('.nav-wrapper');
-  if (window.scrollY > 30) {
-    nav.style.boxShadow = '0 4px 30px rgba(0,0,0,0.3)';
-  } else {
-    nav.style.boxShadow = 'none';
-  }
-});
-
-// ── 5. ACTIVE NAV LINK ON SCROLL ──
-const sections  = document.querySelectorAll('section[id]');
-const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
-
-const sectionObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const id = entry.target.id;
-      navAnchors.forEach(a => {
-        a.style.color = a.getAttribute('href') === `#${id}`
-          ? 'var(--gold)'
-          : '';
+    // Close mobile menu when a link is clicked
+    navMobile.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        navMobile.classList.remove('open');
+        navToggle.classList.remove('open');
       });
-    }
-  });
-}, { threshold: 0.4 });
-
-sections.forEach(s => sectionObserver.observe(s));
-
-// ── 6. FAQ ACCORDION ──
-function toggleFaq(btn) {
-  const answer = btn.nextElementSibling;
-  const isOpen = btn.classList.contains('open');
-
-  // Close all
-  document.querySelectorAll('.faq-q').forEach(q => {
-    q.classList.remove('open');
-    q.nextElementSibling.classList.remove('open');
-  });
-
-  // Open this one if it wasn't already open
-  if (!isOpen) {
-    btn.classList.add('open');
-    answer.classList.add('open');
+    });
   }
-}
 
-// ── 7. CONTACT FORM HANDLER ──
-function handleSubmit(e) {
-  e.preventDefault();
-  const btn = e.target.querySelector('button[type="submit"]');
-  btn.textContent = 'Sending…';
-  btn.disabled = true;
+  // ── FAQ Accordion ──────────────────────────────────────────────
+  document.querySelectorAll('.faq-question').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
 
-  // Simulate send (replace with real form submission endpoint)
-  setTimeout(() => {
-    btn.textContent = '✔ Request Sent!';
-    btn.style.background = 'var(--green-mid)';
-    setTimeout(() => {
-      btn.textContent = 'Send Request →';
-      btn.style.background = '';
-      btn.disabled = false;
-      e.target.reset();
-    }, 3000);
-  }, 1200);
-}
+      // Close all other FAQ items
+      document.querySelectorAll('.faq-item.open').forEach(function (openItem) {
+        if (openItem !== item) {
+          openItem.classList.remove('open');
+          openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Toggle current item
+      item.classList.toggle('open', !isOpen);
+      btn.setAttribute('aria-expanded', String(!isOpen));
+    });
+  });
+
+  // ── Contact Form (Netlify Forms) ───────────────────────────────
+  const form = document.querySelector('form[name="contact"]');
+  const formStatus = document.getElementById('formStatus');
+
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const btn = form.querySelector('.form-btn');
+      const originalText = btn.textContent;
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      const formData = new FormData(form);
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+      })
+        .then(function (response) {
+          if (response.ok) {
+            formStatus.textContent = 'Thank you! Your request has been sent. We\'ll be in touch shortly.';
+            formStatus.className = 'form-status form-status--success';
+            form.reset();
+          } else {
+            throw new Error('Form submission failed');
+          }
+        })
+        .catch(function () {
+          formStatus.textContent = 'Something went wrong. Please call us on 0459 361 650 or email karan@jkfm.co.';
+          formStatus.className = 'form-status form-status--error';
+        })
+        .finally(function () {
+          btn.textContent = originalText;
+          btn.disabled = false;
+        });
+    });
+  }
+
+  // ── Smooth Scroll for Anchor Links ─────────────────────────────
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+
+      var target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        var navEl = document.querySelector('.nav');
+        var navHeight = navEl ? navEl.offsetHeight : 0;
+        var top = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // ── Nav Background on Scroll ───────────────────────────────────
+  var nav = document.querySelector('.nav');
+  if (nav) {
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+  }
+
+});
