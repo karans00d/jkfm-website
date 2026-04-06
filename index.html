@@ -723,25 +723,25 @@
         Tell us about your building and we'll get back to you within 24 hours.
       </p>
       <div class="contact-layout">
-        <form class="contact-form" onsubmit="handleSubmit(event)">
+        <form class="contact-form" name="quote-request" data-netlify="true" onsubmit="handleSubmit(event)">
           <div class="form-row">
             <div class="form-group">
               <label>Full Name *</label>
-              <input type="text" placeholder="Your name" required />
+              <input type="text" name="name" placeholder="Your name" required />
             </div>
             <div class="form-group">
               <label>Email *</label>
-              <input type="email" placeholder="your@email.com" required />
+              <input type="email" name="email" placeholder="your@email.com" required />
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label>Phone</label>
-              <input type="tel" placeholder="+61 4XX XXX XXX" />
+              <input type="tel" name="phone" placeholder="+61 4XX XXX XXX" />
             </div>
             <div class="form-group">
               <label>Service Required *</label>
-              <select required>
+              <select name="service" required>
                 <option value="">Select a service</option>
                 <option>Facilities Management</option>
                 <option>Commercial Cleaning</option>
@@ -754,7 +754,7 @@
           </div>
           <div class="form-group">
             <label>Building / Property Details</label>
-            <textarea rows="4" placeholder="Tell us about your building — type, number of lots, location, and your main concerns..."></textarea>
+            <textarea name="details" rows="4" placeholder="Tell us about your building — type, number of lots, location, and your main concerns..."></textarea>
           </div>
           <button type="submit" class="btn-primary btn-full">Send Request →</button>
         </form>

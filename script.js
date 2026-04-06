@@ -123,22 +123,38 @@ function toggleFaq(btn) {
   }
 }
 
-// ── 7. CONTACT FORM HANDLER ──
+// ── 7. CONTACT FORM HANDLER (Netlify Forms) ──
 function handleSubmit(e) {
   e.preventDefault();
-  const btn = e.target.querySelector('button[type="submit"]');
-  btn.textContent = 'Sending…';
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
+  btn.textContent = 'Sending\u2026';
   btn.disabled = true;
 
-  // Simulate send (replace with real form submission endpoint)
-  setTimeout(() => {
-    btn.textContent = '✔ Request Sent!';
-    btn.style.background = 'var(--green-mid)';
-    setTimeout(() => {
-      btn.textContent = 'Send Request →';
-      btn.style.background = '';
+  const formData = new FormData(form);
+
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams(formData).toString()
+  })
+    .then(res => {
+      if (res.ok) {
+        btn.textContent = '\u2714 Request Sent!';
+        btn.style.background = 'var(--green-mid)';
+        setTimeout(() => {
+          btn.textContent = 'Send Request \u2192';
+          btn.style.background = '';
+          btn.disabled = false;
+          form.reset();
+        }, 3000);
+      } else {
+        btn.textContent = 'Error \u2014 please call us';
+        btn.disabled = false;
+      }
+    })
+    .catch(() => {
+      btn.textContent = 'Error \u2014 please call us';
       btn.disabled = false;
-      e.target.reset();
-    }, 3000);
-  }, 1200);
+    });
 }
