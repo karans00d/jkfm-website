@@ -8,4 +8,17 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+# Environment files
+.env
+.env.*
+
+# Internal docs — not for public access
+findings.md
+progress.md
+task_plan.md
+docs/plans/
+SETUP_NETLIFY_AUTO_DEPLOY.md
+
+# gstack
 .gstack/
