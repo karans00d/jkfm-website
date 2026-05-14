@@ -58,6 +58,9 @@
 </head>
 <body>
 
+  <!-- Skip link (a11y) -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
   <!-- ════════════════════════════════════════════════════
        NAVIGATION
   ════════════════════════════════════════════════════ -->
@@ -94,6 +97,8 @@
       <a href="#contact" class="nav-cta" style="margin-top: 8px;">Get a Quote</a>
     </div>
   </header>
+
+  <main id="main">
 
   <!-- ════════════════════════════════════════════════════
        HERO
@@ -143,7 +148,7 @@
     <div class="container">
       <div class="challenge-grid">
         <div class="challenge-card challenge-card--problem">
-          <h3>The Challenge</h3>
+          <h2>The Challenge</h2>
           <p>Most owners corporations deal with the same recurring issues.</p>
           <ul>
             <li>Issues found late, leading to higher repair costs and avoidable disputes</li>
@@ -152,7 +157,7 @@
           </ul>
         </div>
         <div class="challenge-card challenge-card--solution">
-          <h3>The JKFM Solution</h3>
+          <h2>The JKFM Solution</h2>
           <p>JKFM brings structure and accountability to every building we manage.</p>
           <ul>
             <li>Written status updates so you have clear visibility of all open items</li>
@@ -180,33 +185,33 @@
           <blockquote class="hub-quote">"Decisions always sit with the Committee."</blockquote>
 
           <ul class="hub-checklist">
-            <li><span class="hub-check">✔</span> Day-to-day facilities oversight</li>
-            <li><span class="hub-check">✔</span> Preventative maintenance coordination</li>
-            <li><span class="hub-check">✔</span> Contractor management and accountability</li>
-            <li><span class="hub-check">✔</span> Clear reporting to support committee decision-making</li>
+            <li><span class="hub-check" aria-hidden="true">✔</span> Day-to-day facilities oversight</li>
+            <li><span class="hub-check" aria-hidden="true">✔</span> Preventative maintenance coordination</li>
+            <li><span class="hub-check" aria-hidden="true">✔</span> Contractor management and accountability</li>
+            <li><span class="hub-check" aria-hidden="true">✔</span> Clear reporting to support committee decision-making</li>
           </ul>
         </div>
 
         <!-- Right column: hub diagram -->
         <div class="hub-diagram">
           <div class="hub-node hub-node--top">
-            <div class="hub-node-icon">🏛️</div>
+            <div class="hub-node-icon" aria-hidden="true">🏛️</div>
             <div class="hub-node-label">The Committee</div>
           </div>
           <div class="hub-connector-vertical"></div>
           <div class="hub-node hub-node--center">
-            <div class="hub-node-icon">🏢</div>
+            <div class="hub-node-icon" aria-hidden="true">🏢</div>
             <div class="hub-node-label">JKFM</div>
             <div class="hub-node-sub">Central Hub</div>
           </div>
           <div class="hub-connector-branch"></div>
           <div class="hub-branch">
             <div class="hub-node hub-node--bottom">
-              <div class="hub-node-icon">👥</div>
+              <div class="hub-node-icon" aria-hidden="true">👥</div>
               <div class="hub-node-label">Residents</div>
             </div>
             <div class="hub-node hub-node--bottom">
-              <div class="hub-node-icon">🔧</div>
+              <div class="hub-node-icon" aria-hidden="true">🔧</div>
               <div class="hub-node-label">Contractors</div>
             </div>
           </div>
@@ -228,27 +233,27 @@
       <div class="services-grid">
         <div class="service-card">
           <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           </div>
           <h3>Building Management</h3>
           <p>Proactive oversight of your building's maintenance, compliance, and contractor management. We keep committees informed with structured reporting, not reactive firefighting.</p>
-          <a href="services.html" class="learn-more">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <a href="services.html" class="learn-more" aria-label="Learn more about Building Management">Learn more <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
         </div>
         <div class="service-card">
           <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
           </div>
           <h3>Cleaning Services</h3>
           <p>Structured cleaning programs with documented checklists, photo evidence, and regular quality audits. Common areas, lobbies, car parks, and bin rooms covered with full accountability.</p>
-          <a href="cleaning.html" class="learn-more">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <a href="cleaning.html" class="learn-more" aria-label="Learn more about Cleaning Services">Learn more <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
         </div>
         <div class="service-card">
           <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
           </div>
           <h3>Reporting &amp; Compliance</h3>
           <p>Clear, documented status updates so your committee always knows what's happening, what's planned, and what's been resolved. A complete audit trail for every decision.</p>
-          <a href="services.html" class="learn-more">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <a href="services.html" class="learn-more" aria-label="Learn more about Reporting and Compliance">Learn more <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
         </div>
       </div>
     </div>
@@ -267,21 +272,21 @@
       <div class="services-grid">
         <div class="service-card">
           <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           </div>
           <h3>Lobbies and Common Areas</h3>
           <p>Regular cleaning of entrance lobbies, hallways, lift landings, and shared spaces. Documented checklists ensure nothing is missed.</p>
         </div>
         <div class="service-card">
           <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
           </div>
           <h3>Car Parks and Bin Rooms</h3>
           <p>Deep cleaning of car park levels, bin storage rooms, and loading docks. These high-use areas need regular attention to maintain hygiene standards.</p>
         </div>
         <div class="service-card">
           <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
           </div>
           <h3>Quality Audits and Photo Evidence</h3>
           <p>Every clean is documented with checklists and photo evidence. We run regular quality audits so your committee can see exactly what's been done.</p>
@@ -364,25 +369,25 @@
       </div>
       <div class="roadmap-grid">
         <div class="roadmap-step">
-          <div class="roadmap-icon">🏛️</div>
+          <div class="roadmap-icon" aria-hidden="true">🏛️</div>
           <div class="roadmap-connector"></div>
           <h3>Initial Building Familiarisation</h3>
           <p>We visit, review documentation, and build a clear picture of your building's current state.</p>
         </div>
         <div class="roadmap-step">
-          <div class="roadmap-icon">🎯</div>
+          <div class="roadmap-icon" aria-hidden="true">🎯</div>
           <div class="roadmap-connector"></div>
           <h3>Agreement on Priorities &amp; Risk</h3>
           <p>Together we identify the highest-risk items and agree on what to address first.</p>
         </div>
         <div class="roadmap-step">
-          <div class="roadmap-icon">📡</div>
+          <div class="roadmap-icon" aria-hidden="true">📡</div>
           <div class="roadmap-connector"></div>
           <h3>Clear Plan of Communication</h3>
           <p>Reporting frequency, escalation paths, and contact protocols established upfront.</p>
         </div>
         <div class="roadmap-step">
-          <div class="roadmap-icon">🤝</div>
+          <div class="roadmap-icon" aria-hidden="true">🤝</div>
           <h3>Ongoing Support as Needs Evolve</h3>
           <p>We adapt to your building's changing needs. Always under committee direction.</p>
         </div>
@@ -404,7 +409,7 @@
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             What is a building manager and why do we need one?
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            <svg class="faq-chevron" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-answer">
             <p>A building manager is a professional who oversees the day-to-day operations and maintenance of a residential or commercial building on behalf of the owners corporation. They coordinate contractors, manage compliance, conduct inspections, and provide structured reporting so your committee can make informed decisions instead of chasing issues.</p>
@@ -413,7 +418,7 @@
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             How is JKFM different from other building managers?
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            <svg class="faq-chevron" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-answer">
             <p>We take a proactive, structured approach rather than reactive firefighting. Our 4-step lifecycle (Understand, Plan, Manage, Report) ensures nothing falls through the cracks. We provide documented status updates, quality-checked contractor work, and clear audit trails so your committee always knows what's happening.</p>
@@ -422,7 +427,7 @@
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             What areas of Melbourne do you service?
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            <svg class="faq-chevron" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-answer">
             <p>We service the Melbourne metropolitan area. Whether your building is in the inner suburbs like South Yarra, Richmond, or St Kilda, or further out, we can tailor a management plan to suit your needs.</p>
@@ -431,7 +436,7 @@
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             Do you also provide cleaning services?
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            <svg class="faq-chevron" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-answer">
             <p>Yes. We offer structured cleaning programs for common areas, lobbies, car parks, stairwells, and bin rooms. Every clean is documented with checklists and photo evidence, and we conduct regular quality audits to maintain standards.</p>
@@ -440,7 +445,7 @@
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             How do we get started?
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            <svg class="faq-chevron" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-answer">
             <p>Fill out the contact form below or call us on 0459 361 650. We'll arrange a free assessment of your building's current management setup and provide a tailored proposal for your committee to review.</p>
@@ -476,7 +481,7 @@
           <h3>Contact Details</h3>
           <div class="contact-detail">
             <div class="contact-detail-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             </div>
             <div>
               <div class="contact-detail-label">Phone</div>
@@ -485,7 +490,7 @@
           </div>
           <div class="contact-detail">
             <div class="contact-detail-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
             <div>
               <div class="contact-detail-label">Email</div>
@@ -494,7 +499,7 @@
           </div>
           <div class="contact-detail">
             <div class="contact-detail-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
             <div>
               <div class="contact-detail-label">Location</div>
@@ -503,7 +508,7 @@
           </div>
           <div class="contact-detail">
             <div class="contact-detail-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
             </div>
             <div>
               <div class="contact-detail-label">Service Area</div>
@@ -511,7 +516,7 @@
             </div>
           </div>
         </div>
-        <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" aria-label="Contact JKFM">
           <input type="hidden" name="form-name" value="contact" />
           <p class="hidden" style="display:none;"><label>Don't fill this out: <input name="bot-field" /></label></p>
           <div class="form-row">
@@ -547,6 +552,8 @@
     </div>
   </section>
 
+  </main>
+
   <!-- ════════════════════════════════════════════════════
        FOOTER
   ════════════════════════════════════════════════════ -->
@@ -561,17 +568,20 @@
           <p>Proactive building management and cleaning services for owners corporations across Melbourne. Moving from reactive chaos to proactive control.</p>
           <div class="footer-social">
             <a href="https://www.linkedin.com/company/jkfm" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             </a>
+            <!-- Instagram / YouTube / Facebook hidden until real URLs exist (a11y: dead # links removed) -->
+            <!--
             <a href="#" target="_blank" rel="noopener" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
             </a>
             <a href="#" target="_blank" rel="noopener" aria-label="YouTube">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
             </a>
             <a href="#" target="_blank" rel="noopener" aria-label="Facebook">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             </a>
+            -->
           </div>
         </div>
         <div class="footer-col">
