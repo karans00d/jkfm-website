@@ -2,7 +2,7 @@
 
 **Created:** 2026-04-06
 **Status:** Planning
-**Site:** https://jkfm.co
+**Site:** https://jkfacilitiesmanagement.com.au
 **Repo:** C:\Users\kayso\Projects\jkfm-website (GitHub: karans00d/jkfm-website)
 **Hosting:** Netlify
 **Current stack:** Static HTML/CSS/JS
@@ -17,7 +17,7 @@
 
 **Service area:** Melbourne only (for now)
 **Target audience:** Strata/body corporate committees, property developers, builders — anyone looking for building managers or cleaning services.
-**Director:** Karan Sood — karan@jkfm.co — 0459 361 650
+**Director:** Karan Sood — karan@jkfacilitiesmanagement.com.au — 0459 361 650
 
 ---
 
@@ -190,7 +190,7 @@ Home (/)
 
 ### Tasks
 - [ ] 5.1 Integrate Netlify Forms (add `netlify` attribute to form)
-- [ ] 5.2 Configure email notifications to karan@jkfm.co
+- [ ] 5.2 Configure email notifications to enquiries@jkfacilitiesmanagement.com.au
 - [ ] 5.3 Add proper form validation (client-side)
 - [ ] 5.4 Add real success/error states
 - [ ] 5.5 Add honeypot spam protection

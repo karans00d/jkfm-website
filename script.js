@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         })
         .catch(function () {
-          formStatus.textContent = 'Something went wrong. Please call us on 0459 361 650 or email karan@jkfm.co.';
+          formStatus.textContent = 'Something went wrong. Please call us on 0459 361 650 or email enquiries@jkfacilitiesmanagement.com.au.';
           formStatus.className = 'form-status form-status--error';
         })
         .finally(function () {

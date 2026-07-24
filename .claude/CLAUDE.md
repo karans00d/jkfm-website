@@ -3,7 +3,7 @@
 Static company website for JK Facilities Management.
 
 - **Hosting:** Netlify (auto-deploy from GitHub karans00d/jkfm-website) — every push to `main` goes live; verify on a branch first
-- **Domain:** jkfm.co
+- **Domain:** jkfacilitiesmanagement.com.au (jkfm.co 301s to it during grace window)
 - **Stack:** HTML, CSS, vanilla JS — no framework, no build step
 - **Language:** Australian English, strata/FM terminology
 
@@ -42,7 +42,7 @@ Work in phases — get sign-off after Phase 1 before building.
 - Fonts: Montserrat (headings), Open Sans (body)
 - Logo assets: `Images/JKFM Monogram - Final.png`, `JKFM Logo with White BG.png`
 - New brand assets: `C:\Users\kayso\Desktop\JKFM Brand\JKFM - New\` (logo needs SVG conversion)
-- Contact form target email: `karan@jkfm.co`
+- Contact form target email: `enquiries@jkfacilitiesmanagement.com.au`
 
 ## Read on Entry
 
