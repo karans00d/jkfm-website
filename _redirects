@@ -1,0 +1,7 @@
+# Old domain -> new domain, path-preserving (grace window until at least Jan 2028)
+https://jkfm.co/* https://jkfacilitiesmanagement.com.au/:splat 301!
+http://jkfm.co/* https://jkfacilitiesmanagement.com.au/:splat 301!
+https://www.jkfm.co/* https://jkfacilitiesmanagement.com.au/:splat 301!
+http://www.jkfm.co/* https://jkfacilitiesmanagement.com.au/:splat 301!
+# Canonical host: www -> apex on the new domain
+https://www.jkfacilitiesmanagement.com.au/* https://jkfacilitiesmanagement.com.au/:splat 301!
