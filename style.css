@@ -471,6 +471,13 @@ textarea.form-input { resize: vertical; min-height: 100px; }
 .footer-bottom p { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
 .footer-bottom a { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
 
+.footer-nap {
+  margin-top: 40px; font-size: 0.8rem; color: rgba(255,255,255,0.45);
+  text-align: center; line-height: 1.8;
+}
+.footer-nap a { color: rgba(255,255,255,0.6); transition: color 0.2s; }
+.footer-nap a:hover { color: var(--accent); }
+
 /* ── PAGE HEADER (subpages) ── */
 .page-header {
   background: linear-gradient(165deg, var(--surface-dark) 0%, #12291C 100%);
@@ -501,9 +508,9 @@ textarea.form-input { resize: vertical; min-height: 100px; }
   border-radius: var(--radius); padding: 28px; transition: transform 0.2s, box-shadow 0.2s;
 }
 .blog-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.06); }
-.blog-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; line-height: 1.4; }
-.blog-card h3 a { color: var(--text); transition: color 0.2s; }
-.blog-card h3 a:hover { color: var(--accent); }
+.blog-card h2 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; line-height: 1.4; }
+.blog-card h2 a { color: var(--text); transition: color 0.2s; }
+.blog-card h2 a:hover { color: var(--accent); }
 .blog-card-tag {
   display: inline-block; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em;
   color: var(--accent); background: rgba(198,162,78,0.08);
