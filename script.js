@@ -9,8 +9,17 @@
   "use strict";
 
   /* ---------- 1. FAQ clause toggles ---------- */
+  /* Answers ship visible in the markup so the content survives
+     without JavaScript; collapsing is progressive enhancement. */
 
   var faqButtons = document.querySelectorAll(".faq-q");
+  faqButtons.forEach(function (btn) {
+    var target = document.getElementById(btn.getAttribute("aria-controls"));
+    if (target) {
+      target.hidden = true;
+    }
+    btn.setAttribute("aria-expanded", "false");
+  });
   faqButtons.forEach(function (btn) {
     btn.addEventListener("click", function () {
       var expanded = btn.getAttribute("aria-expanded") === "true";
