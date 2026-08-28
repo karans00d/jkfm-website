@@ -27,12 +27,14 @@ Static company website for JK Facilities Management.
 
 ## Design: 01 Swiss Institutional (since 28/08/2026)
 
-The whole site uses the swiss institutional register skin (Gate 2 winner, matches the
+The whole site uses the swiss institutional skin (Gate 2 winner, matches the
 capability statement). Spec: `docs/superpowers/specs/2026-08-28-swiss-restyle-design.md`.
-Conventions: every page is a numbered document (01 Home … 06 Privacy; blog posts are
-file notes 05.1–05.6), clause numbering inside sections, Schedule A footer, End of
-Document marks. The old 9 phase plan (`docs/WEBSITE_REDESIGN_PLAN.md`) is SUPERSEDED;
-leftovers live in `docs/FOLLOW-UPS.md`.
+Karan's ruling 28/08/2026 (evening): the register NUMBERING conceit is REMOVED — no
+document/clause/plate/schedule numbers anywhere; small caps section labels, hairline
+rules and the navy/paper palette stay. Header shows the monogram logo
+(`Images/jkfm-monogram-nav.png`, transparent bg) + company name; footer is a compact
+particulars block, logo on top. The old 9 phase plan (`docs/WEBSITE_REDESIGN_PLAN.md`)
+is SUPERSEDED; leftovers live in `docs/FOLLOW-UPS.md`.
 
 **Claims rule:** every factual statement must trace to
 `~/Projects/company-resources/jkfm-profile.md`. One override: the flagship building is
