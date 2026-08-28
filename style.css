@@ -484,9 +484,9 @@ textarea.form-input{min-height:7.5rem;resize:vertical;border:1px solid var(--hai
 
 .phone-big{
   display:inline-block;margin-top:2.25rem;line-height:1;
-  font-size:clamp(2.3rem,6.8vw,4.4rem);font-weight:700;
+  font-size:clamp(1.8rem,4.8vw,3.2rem);font-weight:700;
   letter-spacing:-.02em;font-variant-numeric:tabular-nums;
-  text-decoration:none;
+  text-decoration:none;white-space:nowrap;
 }
 .phone-big:hover{text-decoration:underline;text-underline-offset:.18em;text-decoration-thickness:3px}
 
