@@ -526,6 +526,10 @@ textarea.form-input{min-height:7.5rem;resize:vertical;border:1px solid var(--hai
    768px: the grid asserts itself
    ============================================================ */
 
+@media (max-width:767px){
+  [id]{scroll-margin-top:12rem}
+}
+
 @media (min-width:768px){
   .wrap{padding-inline:2rem}
 
