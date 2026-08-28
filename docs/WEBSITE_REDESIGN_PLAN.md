@@ -1,3 +1,5 @@
+> **SUPERSEDED 28/08/2026** by the swiss institutional restyle (docs/superpowers/specs/2026-08-28-swiss-restyle-design.md). Remaining live items moved to docs/FOLLOW-UPS.md.
+
 # JKFM Website Redesign & SEO Plan
 
 **Created:** 2026-04-06

@@ -25,28 +25,32 @@ Static company website for JK Facilities Management.
 4. Blog posts go in `blog/` as standalone HTML files
 5. Check `docs/WEBSITE_REDESIGN_PLAN.md` before major changes
 
-## Active Initiative: 9-Phase Redesign
+## Design: 01 Swiss Institutional (since 28/08/2026)
 
-Plan at `docs/WEBSITE_REDESIGN_PLAN.md`. Phases: (1) design system, (2) SEO infra — sitemap.xml,
-robots.txt, structured data (site currently has none), (3) site architecture — includes fixing
-the known footer-link-breaks-on-subpages bug, (4) visual redesign, (5) contact form fix, (6) social
-media, (7) content/blog, (8) performance, (9) QA/launch.
+The whole site uses the swiss institutional register skin (Gate 2 winner, matches the
+capability statement). Spec: `docs/superpowers/specs/2026-08-28-swiss-restyle-design.md`.
+Conventions: every page is a numbered document (01 Home … 06 Privacy; blog posts are
+file notes 05.1–05.6), clause numbering inside sections, Schedule A footer, End of
+Document marks. The old 9 phase plan (`docs/WEBSITE_REDESIGN_PLAN.md`) is SUPERSEDED;
+leftovers live in `docs/FOLLOW-UPS.md`.
 
-**Highest-impact quick win: Phase 5** — current contact form is fake and losing leads.
-
-Work in phases — get sign-off after Phase 1 before building.
+**Claims rule:** every factual statement must trace to
+`~/Projects/company-resources/jkfm-profile.md`. One override: the flagship building is
+described as 24 levels (B2, B1, ground plus 21 residential levels) — Karan's ruling
+28/08/2026. Hard bans include testimonials, photo evidence claims (ceiling:
+"photographed where an issue warrants it"), plural client framing, and "no lock in".
+No hyphens or em dashes in visible copy (street ranges like 42-48 stay).
 
 ## Brand
 
-- Colours: dark green `#1B4332`, mid green `#2D6A4F`, gold `#C9A84C`, blue `#1E6091`
-- Fonts: Montserrat (headings), Open Sans (body)
-- Logo assets: `Images/JKFM Monogram - Final.png`, `JKFM Logo with White BG.png`
-- New brand assets: `C:\Users\kayso\Desktop\JKFM Brand\JKFM - New\` (logo needs SVG conversion)
-- Contact form target email: `enquiries@jkfacilitiesmanagement.com.au`
+- Colours: navy `#0f2440` (ink and surface), paper `#f4f1ea` (ground); tokens in style.css `:root`
+- Type: Helvetica system stack — no Google Fonts, no webfont requests
+- Lockup is typographic ("JKFM" + spaced small caps name); monogram PNG used for favicon/touch icon only
+- Contact form target email: `enquiries@jkfacilitiesmanagement.com.au` (Netlify Forms, form name `contact`)
 
 ## Read on Entry
 
-- `docs/WEBSITE_REDESIGN_PLAN.md` — 9-phase plan, source of truth
+- `docs/superpowers/specs/2026-08-28-swiss-restyle-design.md` — design + claims spec, source of truth
 - Memory: `project_website_redesign.md`, `reference_jkfm_website.md`
 
 ## Relevant Skills
