@@ -150,7 +150,7 @@ h1{
   line-height:.99;letter-spacing:-.02em;font-weight:700;
   text-wrap:balance;
 }
-.page-cover h1{font-size:clamp(2rem,5.4vw,4rem)}
+.page-cover h1{font-size:clamp(2rem,4.4vw,3.4rem);max-width:none}
 .doc-sub{
   margin-top:1.5rem;font-weight:700;
   font-size:clamp(1rem,1.7vw,1.25rem);
