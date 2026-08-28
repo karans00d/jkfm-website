@@ -123,3 +123,16 @@
 - [ ] **Step 3:** Serve locally, browse every page at desktop and 375px mobile; check nav wrap, FAQ toggles, form renders, footer Schedule A.
 - [ ] **Step 4:** Screenshots of all pages; push branch to GitHub for a Netlify branch preview URL.
 - [ ] **Step 5:** Present to Karan: preview link + screenshots + claims-sweep summary. **STOP — no merge to main without his go.**
+
+---
+
+## Codex review addendum (sol, 28/08/2026) — adopted amendments
+
+1. Task 9 gains a full read-through claims pass of every page against jkfm-profile.md (not greps alone).
+2. Grep fixes: ban `no obligations beyond` (not `no obligation` — the approved health check wording contains it); domain grep allowlists `sitecheck.jkfm.co` and `_redirects`.
+3. Form acceptance = markup diff: identical form name, method, data-netlify, honeypot, hidden form-name field (if present today), field names and labels between old and new index.html. No live test submissions.
+4. Preflight each session: `git branch --show-current` must be swiss-restyle, `git status --short` understood.
+5. All commits use explicit `git add <files>`, checked with `git status --short` first. og-card.html stays in scratchpad, never committed.
+6. Nav is 5 numbered links + Get a quote button (6 items). Task 9 adds a scratchpad Python script comparing normalised nav/footer across all 14 pages and checking aria-current + relative path correctness from root and blog/.
+7. Task 9 adds keyboard tab-through, FAQ aria-expanded behaviour, and contrast spot check; full accessibility audit remains in FOLLOW-UPS.md.
+8. Task 9 adds: JSON-LD blocks parsed with python json, canonical/og URL consistency per page, browser console error check, and a 768px intermediate width pass.
