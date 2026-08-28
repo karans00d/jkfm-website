@@ -273,6 +273,11 @@ h1{
 /* photographic plate (about page): image as evidence, not decoration */
 .plate{margin-top:1.6rem;border:1px solid var(--hair-strong);max-width:24rem}
 .plate img{width:100%;filter:grayscale(1) contrast(1.05)}
+/* colour plate: shown solid, hairline border, no treatment */
+.plate--colour img{filter:none}
+.on-navy .plate{border-color:var(--hair-on-navy)}
+.on-navy .plate figcaption{border-top-color:var(--hair-on-navy);color:var(--soft-on-navy)}
+.on-navy .plate figcaption strong{color:var(--paper)}
 .plate figcaption{
   padding:.7rem .9rem;font-size:.78rem;line-height:1.45;
   color:var(--ink-soft);border-top:1px solid var(--hair-strong);

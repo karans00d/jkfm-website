@@ -114,3 +114,18 @@ no SLAs, no per task photo claims, no 9 Darling photo.
    testimonial, banned phrases).
 5. Show Karan: browser preview + screenshots + Netlify branch preview link.
    Deploy to main only on his go.
+
+## Scope addition (28/08/2026 evening, relayed from the capability statement session)
+
+- Homepage section 06 is now **The flagship**: 42-48 Claremont Street featured with
+  the approved dusk render (Images/claremont-tower.jpg, shown solid in colour with a
+  hairline border — no fade treatments), covering building management, maintenance
+  and cleaning. New approved claim: "more than 5,000 cleaning hours delivered since
+  October 2023" (contract since 23/10/2023, Mon to Sat 6h/day).
+- Carried-over capability statement rulings: plain factual headings, no slogans in
+  the new section; "quality audits" not "unannounced quality audits" (swept site
+  wide); cleaning framed as trained site dedicated teams, never Karan personally.
+- NOT changed pending Karan's word: sitewide contact email stays
+  enquiries@jkfacilitiesmanagement.com.au (the karan@jkfm.co ruling was for the
+  capability statement contact line); homepage tagline stays (profile approved core
+  tagline).
