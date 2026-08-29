@@ -72,11 +72,6 @@ textarea:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
   display:none;font-weight:700;font-size:.78rem;
   text-transform:uppercase;letter-spacing:.15em;
 }
-.head-phone{
-  margin-left:auto;font-weight:700;font-size:.9rem;
-  font-variant-numeric:tabular-nums;text-decoration:none;
-}
-.head-phone:hover{text-decoration:underline;text-underline-offset:.35em;text-decoration-thickness:2px}
 
 /* primary navigation */
 .site-nav{
@@ -490,7 +485,6 @@ textarea.form-input{min-height:7.5rem;resize:vertical;border:1px solid var(--hai
   .wrap{padding-inline:2rem}
 
   .lockup-name{display:inline}
-  .head-phone{margin-left:0}
 
   .facts{grid-template-columns:repeat(3,1fr);gap:2rem}
   .facts.facts-4{grid-template-columns:repeat(4,1fr)}
