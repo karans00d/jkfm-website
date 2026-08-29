@@ -38,8 +38,8 @@ is SUPERSEDED; leftovers live in `docs/FOLLOW-UPS.md`.
 
 **Claims rule:** every factual statement must trace to
 `~/Projects/company-resources/jkfm-profile.md`. One override: the flagship building is
-described as 24 levels (B2, B1, ground plus 21 residential levels) — Karan's ruling
-28/08/2026. Hard bans include testimonials, photo evidence claims (ceiling:
+described as a 24 level tower — level counts only, never the breakdown (no B2/B1/ground
+wording) on public collateral; Karan's rulings 28-29/08/2026. Hard bans include testimonials, photo evidence claims (ceiling:
 "photographed where an issue warrants it"), plural client framing, and "no lock in".
 No hyphens or em dashes in visible copy (street ranges like 42-48 stay).
 
