@@ -26,12 +26,18 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["Organization", "LocalBusiness"],
+    "@id": "https://jkfacilitiesmanagement.com.au/#organization",
     "name": "JK Facilities Management",
     "alternateName": "JKFM",
-    "url": "https://jkfacilitiesmanagement.com.au",
-    "telephone": "+61459361650",
+    "legalName": "JK Facilities Management Pty Ltd",
+    "taxID": "ABN 78 670 382 420",
+    "url": "https://jkfacilitiesmanagement.com.au/",
+    "logo": "https://jkfacilitiesmanagement.com.au/Images/jkfm-logo-lockup.png",
+    "image": "https://jkfacilitiesmanagement.com.au/Images/og-share.png",
+    "description": "Structured building management and cleaning for strata communities across Melbourne.",
     "email": "enquiries@jkfacilitiesmanagement.com.au",
+    "telephone": "+61459361650",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "42-48 Claremont St",
@@ -44,12 +50,29 @@
       "@type": "City",
       "name": "Melbourne"
     },
-    "description": "Proactive building management and cleaning services for strata and owners corporations across Melbourne.",
-    "serviceType": ["Building Management", "Cleaning Services", "Facilities Management"],
-    "founder": {
-      "@type": "Person",
-      "name": "Karan Sood"
-    }
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Building management",
+            "url": "https://jkfacilitiesmanagement.com.au/services.html"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Cleaning services",
+            "url": "https://jkfacilitiesmanagement.com.au/cleaning.html"
+          }
+        }
+      ]
+    },
+    "sameAs": ["https://www.linkedin.com/company/jk-facilities-management"]
   }
   </script>
 </head>
