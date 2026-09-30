@@ -8,3 +8,8 @@ https://www.jkfacilitiesmanagement.com.au/* https://jkfacilitiesmanagement.com.a
 # Duplicate-URL cleanup: collapse index.html variants onto the canonical paths
 /index.html / 301!
 /blog/index.html /blog/ 301!
+# Internal folders: the repo root is published, so these are uploaded with every deploy. Return 404 so they are not reachable on the site.
+/docs /404.html 404!
+/docs/* /404.html 404!
+/uniform-mockup /404.html 404!
+/uniform-mockup/* /404.html 404!
