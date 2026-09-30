@@ -15,7 +15,7 @@ Static company website for JK Facilities Management.
 - `style.css` — single stylesheet
 - `script.js` — single script file
 - `Images/` — site images (descriptive filenames)
-- `docs/` — design/planning docs (not deployed)
+- `docs/` — design/planning docs (uploaded with every deploy because `netlify.toml` publishes the repo root; `_redirects` returns 404 for `/docs/*` and `/uniform-mockup/*` so they are not reachable on the site)
 
 ## Rules
 
