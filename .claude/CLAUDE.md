@@ -15,7 +15,7 @@ Static company website for JK Facilities Management.
 - `style.css` — single stylesheet
 - `script.js` — single script file
 - `Images/` — site images (descriptive filenames)
-- `docs/` — design/planning docs (not deployed)
+- `docs/` — design/planning docs (uploaded with every deploy because `netlify.toml` publishes the repo root; `_redirects` returns 404 for `/docs/*` and `/uniform-mockup/*` so they are not reachable on the site)
 
 ## Rules
 
@@ -39,8 +39,8 @@ is SUPERSEDED; leftovers live in `docs/FOLLOW-UPS.md`.
 **Claims rule:** every factual statement must trace to
 `~/Projects/company-resources/jkfm-profile.md`. One override: the flagship building is
 described as a 24 level tower — level counts only, never the breakdown (no B2/B1/ground
-wording) on public collateral; Karan's rulings 28-29/08/2026. Hard bans include testimonials, photo evidence claims (ceiling:
-"photographed where an issue warrants it"), plural client framing, and "no lock in".
+wording) on public collateral; Karan's rulings 28-29/08/2026. Testimonials only when named and approved in writing (ruling 20/10/2026, see profile rule 6). Hard bans include unapproved testimonials, photo evidence claims (ceiling:
+"photographed where an issue warrants it"), plural client framing beyond the two named buildings, and "no lock in".
 No hyphens or em dashes in visible copy (street ranges like 42-48 stay).
 
 ## Brand
