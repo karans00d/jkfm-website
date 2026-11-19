@@ -370,7 +370,7 @@ h1{
   border:0;border-bottom:1px solid var(--hair-strong);
   padding:.45rem 0 .55rem;border-radius:0;
 }
-.form-input::placeholder{color:rgba(61,74,97,.55)}
+.form-input::placeholder{color:#5f6a7c}
 textarea.form-input{min-height:7.5rem;resize:vertical;border:1px solid var(--hair-strong);padding:.6rem}
 .enquiry .btn{margin-top:1.5rem;width:100%;text-align:center}
 .form-note{margin-top:.9rem;font-size:.78rem;color:var(--ink-soft)}
