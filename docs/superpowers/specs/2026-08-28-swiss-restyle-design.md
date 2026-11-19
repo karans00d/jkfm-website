@@ -20,9 +20,9 @@ existing SEO infrastructure, and sweeping every factual claim against
   hairline rules, decimal clause numbering, zero imagery.
 - **Claims:** `jkfm-profile.md` is the single source of factual claims. Every
   claim on the site must trace to it, with ONE override:
-- **24 level ruling (Karan, 28/08/2026):** the flagship building is described as
-  **24 levels (B2, B1, ground plus 21 residential levels)** — overrides the
-  profile's 21 level wording wherever the building is described.
+- **Level count (Karan, 19/11/2026, replaces the 28/08 24 level ruling):** the
+  flagship building is described as **21 levels**, matching the profile. Basements,
+  ground and roof are not counted or listed.
 
 ## Page inventory (all get the swiss skin)
 
@@ -44,7 +44,7 @@ clause numbering, Schedule A footer, End of Document marks.
 
 1. **Testimonials removed** (claims file bans them; none approved). Replaced on
    the homepage by a **Track record** section on 42-48 Claremont Street, built
-   from profile section 3: 24 levels (ruling wording), 111 apartments, 25+
+   from profile section 3: 21 levels, 111 apartments, 25+
    specialist contractors coordinated at one building, live WIP register (1,000+
    historical entries), written report to every committee meeting (locked
    generic wording — no frequency), BM + cleaning held by the same accountable
