@@ -55,6 +55,7 @@ def serve():
 
 
 def scroll_all(page):
+    """Scroll the page so lazy images load. Returns False if images did not all load."""
     # instant scrolling so screenshots are not taken mid smooth scroll
     page.evaluate("document.documentElement.style.scrollBehavior = 'auto'")
     page.evaluate("""async () => {
@@ -66,7 +67,10 @@ def scroll_all(page):
                                timeout=8000)
     except Exception:
         print("    (timed out waiting for images)")
+        page.evaluate("window.scrollTo(0, 0)")
+        return False
     page.evaluate("window.scrollTo(0, 0)")
+    return True
 
 
 def check_page(ctx, base, path, vp, shots, fails):
@@ -85,7 +89,8 @@ def check_page(ctx, base, path, vp, shots, fails):
               loading: i.getAttribute('loading') || '', nat: i.naturalWidth,
               where: i.closest('header') ? 'header' : i.closest('footer') ? 'footer' : 'body'};
     })""")
-    scroll_all(page)
+    if not scroll_all(page):
+        fails.append(f"{path} {vp}: images did not all load")
     page.wait_for_timeout(200)
     cls = page.evaluate("window.__cls")
     if shots:
@@ -165,8 +170,16 @@ def reduced_motion(browser, base, fails):
 def compare(a, b):
     from PIL import Image, ImageChops
     bad = 0
-    for fa in sorted(glob.glob(os.path.join(a, "*.png"))):
-        fb = os.path.join(b, os.path.basename(fa))
+    names_a = {os.path.basename(f) for f in glob.glob(os.path.join(a, "*.png"))}
+    names_b = {os.path.basename(f) for f in glob.glob(os.path.join(b, "*.png"))}
+    if not names_a or not names_b:
+        print("one of the screenshot folders is empty or missing")
+        return 1
+    for name in sorted(names_a ^ names_b):
+        print(f"MISSING  {name}  only in {'first' if name in names_a else 'second'} folder")
+        bad += 1
+    for name in sorted(names_a & names_b):
+        fa, fb = os.path.join(a, name), os.path.join(b, name)
         ia, ib = Image.open(fa).convert("RGB"), Image.open(fb).convert("RGB")
         if ia.size != ib.size:
             print(f"DIFF  {os.path.basename(fa)}  size {ia.size} vs {ib.size}")

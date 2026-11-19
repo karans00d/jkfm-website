@@ -101,12 +101,13 @@ def load_redirects():
             continue
         parts = line.split()
         if len(parts) >= 2:
-            rules.append((parts[0], parts[1]))
+            status = parts[2] if len(parts) >= 3 else ""
+            rules.append((parts[0], parts[1], status))
     return rules
 
 
 def match_redirect(path, rules):
-    for src, dst in rules:
+    for src, dst, _status in rules:
         if "://" in src:
             continue  # host rules only apply to the old or www host
         pattern = "^" + re.escape(src).replace(r"\*", "(.*)") + "$"
@@ -136,8 +137,21 @@ def ids_of(target):
     return _ids_cache[target]
 
 
+def forced_404(path, rules):
+    """True when a forced rule (status ending in !) returns 404 for this path."""
+    for src, _dst, status in rules:
+        if "://" in src or not status.startswith("404") or not status.endswith("!"):
+            continue
+        pattern = "^" + re.escape(src).replace(r"\*", "(.*)") + "$"
+        if re.match(pattern, path):
+            return True
+    return False
+
+
 def resolve(path, rules, depth=0):
     """Return (file or None, note)."""
+    if forced_404(path, rules):
+        return None, "forced 404 in _redirects"
     target = file_for(path)
     if target:
         return target, ""

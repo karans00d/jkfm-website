@@ -13,6 +13,7 @@ headless Chromium via render_check.py, so the site is served locally.
 """
 import glob
 import os
+import re
 import sys
 
 from PIL import Image
@@ -44,6 +45,23 @@ def rendered_widths():
     return widest
 
 
+def update_dimensions(name, w, h):
+    """Rewrite width/height on every <img> that points at this file, so the markup matches its pixels."""
+    changed = 0
+    pages = glob.glob(os.path.join(ROOT, "*.html")) + glob.glob(os.path.join(ROOT, "blog", "*.html"))
+    tag_re = re.compile(r'<img\b[^>]*src="[^"]*/?' + re.escape(name) + r'"[^>]*>')
+    for page in pages:
+        html = open(page, encoding="utf-8").read()
+        def fix(m):
+            t = re.sub(r'\swidth="\d+"', f' width="{w}"', m.group(0))
+            return re.sub(r'\sheight="\d+"', f' height="{h}"', t)
+        new = tag_re.sub(fix, html)
+        if new != html:
+            open(page, "w", encoding="utf-8").write(new)
+            changed += 1
+    return changed
+
+
 def main():
     resample = "--resample" in sys.argv
     widest = rendered_widths()
@@ -70,7 +88,7 @@ def main():
                     out = im.resize((target, h), Image.LANCZOS)
                     kw = {"quality": 82, "optimize": True, "progressive": True} if im.format == "JPEG" else {"optimize": True}
                     out.save(f, im.format, **kw)
-                    note += f" -> {os.path.getsize(f)} bytes"
+                    note += f" -> {os.path.getsize(f)} bytes; {update_dimensions(name, target, h)} page(s) updated"
             else:
                 note += "; over 300 KB but not displayed smaller than its pixels"
         print(f"{name:<40}{size:>9}{size / 1024:>8.1f}  {im.width}x{im.height:<6}{im.format:<5}"
