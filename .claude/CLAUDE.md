@@ -37,9 +37,10 @@ particulars block, logo on top. The old 9 phase plan (`docs/WEBSITE_REDESIGN_PLA
 is SUPERSEDED; leftovers live in `docs/FOLLOW-UPS.md`.
 
 **Claims rule:** every factual statement must trace to
-`~/Projects/company-resources/jkfm-profile.md`. One override: the flagship building is
-described as a 24 level tower — level counts only, never the breakdown (no B2/B1/ground
-wording) on public collateral; Karan's rulings 28-29/08/2026. Testimonials only when named and approved in writing (ruling 20/10/2026, see profile rule 6). Hard bans include unapproved testimonials, photo evidence claims (ceiling:
+`~/Projects/company-resources/jkfm-profile.md`. The flagship building is
+described as a 21 level tower (Karan's ruling 19/11/2026, replaces the 24 level override of
+28/08 and 23/09): level counts only, never the breakdown (no B2/B1/ground/roof wording) on
+public collateral. Testimonials only when named and approved in writing (ruling 20/10/2026, see profile rule 6). Hard bans include unapproved testimonials, photo evidence claims (ceiling:
 "photographed where an issue warrants it"), plural client framing beyond the two named buildings, and "no lock in".
 No hyphens or em dashes in visible copy (street ranges like 42-48 stay).
 
