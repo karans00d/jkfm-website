@@ -28,8 +28,8 @@ import sys
 import threading
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-PAGES = ["index.html", "about.html", "services.html", "cleaning.html",
-         "oc-managers.html", "privacy.html", "404.html"] + sorted(
+PAGES = sorted(os.path.basename(p) for p in glob.glob(os.path.join(ROOT, "*.html"))
+                if not os.path.basename(p).startswith("google")) + sorted(
     os.path.relpath(p, ROOT) for p in glob.glob(os.path.join(ROOT, "blog", "*.html")))
 VIEWPORTS = {"desktop": (1440, 900), "mobile": (390, 844)}
 CHROMIUM = "/opt/pw-browsers/chromium-1194/chrome-linux/chrome"

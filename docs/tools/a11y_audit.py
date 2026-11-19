@@ -29,8 +29,8 @@ from PIL import Image
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 
 PAGES = sorted(
-    ["index.html", "about.html", "services.html", "cleaning.html",
-     "oc-managers.html", "privacy.html", "404.html"]
+    [os.path.basename(p) for p in glob.glob(os.path.join(ROOT, "*.html"))
+     if not os.path.basename(p).startswith("google")]
     + [os.path.relpath(p, ROOT) for p in glob.glob(os.path.join(ROOT, "blog", "*.html"))]
 )
 

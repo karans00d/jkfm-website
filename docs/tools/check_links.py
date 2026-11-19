@@ -222,7 +222,8 @@ def main():
         for line, attr, value in p.refs:
             relative = not (value.startswith(("/", "#", "?")) or urlsplit(value).scheme)
             for base in bases if relative else bases[:1]:
-                kind, err = check_ref(value, base, rules, page)
+                # JSON-LD @id values such as /#organization are identifiers, not page anchors
+                kind, err = check_ref(value.split("#", 1)[0] if attr == "json-ld" else value, base, rules, page)
                 if kind == "external":
                     external.setdefault(value, set()).add(rel)
                     break
